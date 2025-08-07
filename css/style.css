@@ -17,6 +17,10 @@
   --jpg-icon-color: #f89634;
 }
 
+html {
+  transition: filter 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
 /* Sovrascriviamo le variabili in modalità scura */
 html.dark-mode {
   filter: invert(100%);
@@ -28,8 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: background-color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67),
-    color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   background-color: var(--background-color);
   color: var(--text-color);
 }
