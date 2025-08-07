@@ -1,0 +1,60 @@
+{
+  "usr": {
+    "permissions": "drwxr-x---",
+    "bin": {
+      "permissions": "drwxr-xr-x",
+      "python3": "-rwxr-xr-x",
+      "gcc": "-rwxr-xr-x"
+    },
+    "share": {
+      "permissions": "drwxr-xr-x",
+      "man": {
+        "permissions": "drwxr-xr-x",
+        "modules": {
+          "permissions": "drwxr-xr-x",
+          "ls.gz": "-rw-r--r--",
+          "grep.gz": "-rw-r--r--"
+        }
+      },
+      "doc": {
+        "permissions": "drwxr-xr-x",
+        "README.txt": "-rw-r--r--"
+      }
+    }
+  },
+  "var": {
+    "permissions": "drwxr-xr-x",
+    "log": {
+      "permissions": "drwx------",
+      "syslog": "-rw-------",
+      "auth.log": "-rw-------"
+    },
+    "www": {
+      "permissions": "drwxr-xr-x",
+      "index.html": "-rw-r--r--",
+      "style.css": "-rw-r--r--"
+    }
+  },
+  "home": {
+    "permissions": "drwxr-x---",
+    "michele": {
+      "permissions": "drwx------",
+      "Projects": {
+        "permissions": "drwxr-xr-x",
+        "copilot": {
+          "permissions": "drwxr-xr-x",
+          "main.py": "-rwxr-xr--",
+          "README.md": "-rw-r--r--"
+        },
+        "portfolio": {
+          "permissions": "drwxr-xr-x",
+          "index.html": "-rw-r--r--"
+        }
+      },
+      "Downloads": {
+        "permissions": "drwxr-xr-x",
+        "setup.exe": "-rwx------"
+      }
+    }
+  }
+}
