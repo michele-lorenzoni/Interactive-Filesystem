@@ -133,7 +133,7 @@ html_lines = [
     # ========== CONTROLLO MODALITÀ SCURA ==========
     "  <div class='color-toggle-container'>",
     "    <input type='checkbox' id='dark-mode-toggle'>",  # Checkbox per attivare/disattivare
-    "    <label for='dark-mode-toggle'>Dark Mode</label>",  # Label collegata al checkbox
+    "    <label for='dark-mode-toggle'>Invert Color</label>",  # Label collegata al checkbox
     "  </div>",
 ]
 
