@@ -142,7 +142,6 @@ html_lines = [
 for name, content in filesystem.items():
     html_lines.extend(render_node(name, content))
 
-# ========== JAVASCRIPT PER MODALITÀ SCURA ==========
 html_lines += [
     "</body>",
     "</html>",
@@ -150,7 +149,7 @@ html_lines += [
 
 # ========== SCRITTURA FILE HTML FINALE ==========
 # Unisce tutte le righe e scrive il file HTML risultante
-with open("filesystem_interattivo.html", "w", encoding="utf-8") as f:
+with open("interactive_filesystem.html", "w", encoding="utf-8") as f:
     f.write("\n".join(html_lines))
 
-print("File 'filesystem_interattivo.html' generato.")
+print("File 'interactive_filesystem.html' generato con successo.")
