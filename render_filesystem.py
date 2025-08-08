@@ -123,20 +123,23 @@ html_lines = [
     "  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>",
     # Carica font Victor Mono (monospaziale per aspetto da terminale)
     "  <link href='https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap' rel='stylesheet'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-Iosevka.min.css'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/neon.css'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/argon.css'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon.css'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/radon.css'>",
+    "  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/krypton.css'>",
     # ========== METADATI DOCUMENTO ==========
     "  <meta charset='UTF-8'>",  # Supporto caratteri Unicode
     "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>",  # Responsive design
     "  <link rel='stylesheet' href='css/style.css'>",  # Link al CSS esterno
     "  <script src='js/dark_mode.js' defer></script>",
+    "  <script src='js/select_font.js' defer></script>",
     "  <title>FileSystem Interattivo</title>",
     "</head>",
     "<body>",
+    "<div id='main-cont-0'>",
     "<h1>FileSystem Interattivo</h1>",
-    # ========== CONTROLLO MODALITÀ SCURA ==========
-    "  <div class='color-toggle-container'>",
-    "    <input type='checkbox' id='dark-mode-toggle'>",  # Checkbox per attivare/disattivare
-    "    <label for='dark-mode-toggle'>Invert Color</label>",  # Label collegata al checkbox
-    "  </div>",
 ]
 
 # ========== GENERAZIONE CONTENUTO FILESYSTEM ==========
@@ -145,6 +148,25 @@ for name, content in filesystem.items():
     html_lines.extend(render_node(name, content))
 
 html_lines += [
+    "</div>",
+    "<div id='main-cont-1'>",
+    # ========== CONTROLLO MODALITÀ SCURA ==========
+    "  <div class='color-toggle-container'>",
+    "    <input type='checkbox' id='dark-mode-toggle'>",  # Checkbox per attivare/disattivare
+    "    <label for='dark-mode-toggle'>Invert Color</label>",  # Label collegata al checkbox
+    "  </div>",
+    "  <div class='select'>",
+    "   <select  id='select-font'>",
+    "       <option value='Victor Mono'>Victor Mono</option>",
+    "       <option value='TypoPRO Iosevka Term'>TypoPRO Iosevka Term</option>",
+    "       <option value='Monaspace Neon'>Monaspace Neon</option>",
+    "       <option value='Monaspace Argon'>Monaspace Argon</option>",
+    "       <option value='Monaspace Xenon'>Monaspace Xenon</option>",
+    "       <option value='Monaspace Radon'>Monaspace Radon</option>",
+    "       <option value='Monaspace Krypton'>Monaspace Krypton</option>",
+    "   </select>",
+    "  </div>",
+    "</div>",
     "</body>",
     "</html>",
 ]

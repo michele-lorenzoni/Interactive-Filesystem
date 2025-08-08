@@ -1,6 +1,5 @@
 /* === GLOBALI === */
 * {
-  font-family: "Victor Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
   box-sizing: border-box;
@@ -18,6 +17,7 @@
 }
 
 html {
+  font-family: "Victor Mono", monospace;
   transition: filter 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
@@ -30,10 +30,34 @@ html.dark-mode {
 body {
   padding: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+#main-cont-0 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#main-cont-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 0;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+}
+
+select {
+  flex-grow: 1;
 }
 
 h1 {
