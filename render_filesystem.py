@@ -1,6 +1,8 @@
 # Importazioni necessarie per il funzionamento del programma
 import json  # Per leggere e parsare il file JSON del filesystem
 import os  # Per operazioni sui path (estrazione estensioni file)
+from bs4 import BeautifulSoup
+
 import icons
 
 # Icona generica per file senza tipo specifico - grigio neutro (#c5c5c5)
@@ -150,6 +152,9 @@ html_lines += [
 # ========== SCRITTURA FILE HTML FINALE ==========
 # Unisce tutte le righe e scrive il file HTML risultante
 with open("interactive_filesystem.html", "w", encoding="utf-8") as f:
-    f.write("\n".join(html_lines))
+    html_string = "\n".join(html_lines)
+    soup = BeautifulSoup(html_string, "html.parser")
+    pretty_html = soup.prettify()
+    f.write(pretty_html)
 
 print("File 'interactive_filesystem.html' generato con successo.")
